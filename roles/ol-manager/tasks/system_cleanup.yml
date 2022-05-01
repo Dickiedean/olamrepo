@@ -4,6 +4,7 @@
       name: packagekit
       state: stopped
       enabled: no       
+    ignore_errors: yes 
 
   - name: Remove PackageKit
     yum:
