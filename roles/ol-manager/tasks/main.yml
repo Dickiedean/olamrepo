@@ -1,0 +1,15 @@
+---
+  - name: Get existing systems
+    import_tasks: get_existing_systems.yml      
+
+  - block:  
+      # if you use import_tasks instead include_tasks the tasks after will fail when these tasks fail         
+      - name: Perform cleanup tasks
+        include_tasks: system_cleanup.yml
+
+      - name: Register system with Oracle Linux Manager
+        include_tasks: join_systems.yml
+    
+
+      
+    when: inventory_hostname not in registered_systems.stdout_lines

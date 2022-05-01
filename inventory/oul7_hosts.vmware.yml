@@ -1,0 +1,27 @@
+---
+  plugin: community.vmware.vmware_vm_inventory
+  strict: False
+  hostname: vcsa01.kcloud.local
+  username: richard.pelser
+  password: D00msdaymachine
+  validate_certs: False
+  with_tags: True
+  hostnames:
+  - 'guest.hostName'
+  - 'config.name'
+  properties:
+  - 'config.name'
+  - 'config.guestId'
+  - 'guest.hostName'
+  - 'guest.ipAddress'
+  - 'guest.guestFamily'
+  - 'guest.guestFullName'
+  - 'runtime.powerState'
+  # - 'customValue'
+
+
+  filters:
+  # - CustomFieldsManager.group == "test"
+  - config.guestId == "oracleLinux7_64Guest"
+  - runtime.powerState == "poweredOn"
+  
