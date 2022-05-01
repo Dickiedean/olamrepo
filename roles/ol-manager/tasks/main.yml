@@ -1,6 +1,9 @@
 ---
   - name: Get existing systems
     import_tasks: get_existing_systems.yml      
+  
+  - name: Print hosts
+    debug: msg='{{ registered_systems.stdout_lines }}'
 
   - block:  
       
