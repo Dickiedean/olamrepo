@@ -16,7 +16,7 @@
         PackageKit-gtk3-module
       state: absent
       lock_timeout: 600
-      ignore_errors: yes       
+    ignore_errors: yes       
 
   # check for rpm module and use state: absent     
   - name: Remove Spacewalk cert
