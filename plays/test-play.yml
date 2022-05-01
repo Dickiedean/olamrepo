@@ -4,6 +4,7 @@
 - name: test-play.yml apply common configuration to all nodes
   hosts: all
   user: root
+  command_warnings: False
 
   roles:
     - ol-manager
