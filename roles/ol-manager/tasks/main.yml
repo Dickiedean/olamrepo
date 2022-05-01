@@ -9,7 +9,7 @@
         include_tasks: system_cleanup.yml
 
       - name: Register system with Oracle Linux Manager
-        include_tasks: join_systems.yml
+        include_tasks: register_systems.yml
     
 
       
