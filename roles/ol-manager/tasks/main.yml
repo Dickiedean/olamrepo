@@ -3,12 +3,17 @@
     import_tasks: get_existing_systems.yml      
 
   - block:  
+      
+      - name: test message
+        debug: 
+          msg: '{{ inventory_hostname }} not in ol-manager'
+      
       # if you use import_tasks instead include_tasks the tasks after will fail when these tasks fail         
-      - name: Perform cleanup tasks
-        include_tasks: system_cleanup.yml
+      # - name: Perform cleanup tasks
+      #   include_tasks: system_cleanup.yml
 
-      - name: Register system with Oracle Linux Manager
-        include_tasks: join_systems.yml
+      # - name: Register system with Oracle Linux Manager
+      #   include_tasks: join_systems.yml
     
 
       
