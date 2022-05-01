@@ -1,11 +1,10 @@
 ---
   plugin: community.vmware.vmware_vm_inventory
   strict: False
-  hostname: vcsa01.kcloud.local
-  username: richard.pelser
-  password: D00msdaymachine
+  hostname: VMWARE_HOST
+  username: VMWARE_USER
+  password: VMWARE_PASSWORD
   validate_certs: False
-  with_tags: True
   hostnames:
   - 'guest.hostName'
   - 'config.name'
@@ -17,7 +16,7 @@
   - 'guest.guestFamily'
   - 'guest.guestFullName'
   - 'runtime.powerState'
-  # - 'customValue'
+  - 'customValue'
 
 
   filters:
