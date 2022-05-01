@@ -1,9 +1,9 @@
 ---
   plugin: community.vmware.vmware_vm_inventory
   strict: False
-  hostname: '{{ VMWARE_HOST }}'
-  username: '{{ VMWARE_USER }}' 
-  password: '{{ VMWARE_PASSWORD }}'
+  hostname: {{ VMWARE_HOST }}
+  username: {{ VMWARE_USER }}
+  password: {{ VMWARE_PASSWORD }}
   validate_certs: False
   hostnames:
   - 'guest.hostName'
