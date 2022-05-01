@@ -21,6 +21,7 @@
 
   - name: Clear yum cache
     ansible.builtin.shell: /usr/bin/yum clean all
+    ignore_errors: yes
 
   - name: Remove Spacewalk cert
     ansible.builtin.shell: rpm -e rhn-org-trusted-ssl-cert-1.0-1
@@ -38,3 +39,6 @@
         state: absent
     with_items: "{{ files_to_delete.files }}"
   
+  - name: Clear yum cache
+    ansible.builtin.shell: /usr/bin/yum clean all
+    ignore_errors: yes
