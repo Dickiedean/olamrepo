@@ -6,10 +6,10 @@
             
       # if you use import_tasks instead include_tasks the tasks after will fail when these tasks fail         
       - name: Perform cleanup tasks
-        include_tasks: system_cleanup.yml
+        import_tasks: system_cleanup.yml
 
       - name: Register system with Oracle Linux Manager
-        include_tasks: register_systems.yml
+        import_tasks: register_systems.yml
     
 
       

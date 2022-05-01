@@ -18,7 +18,10 @@
       lock_timeout: 600
     ignore_errors: yes       
 
-  # check for rpm module and use state: absent     
+
+  - name: Clear yum cache
+    ansible.builtin.shell: /usr/bin/yum clean all
+
   - name: Remove Spacewalk cert
     ansible.builtin.shell: rpm -e rhn-org-trusted-ssl-cert-1.0-1
     ignore_errors: yes
@@ -35,5 +38,3 @@
         state: absent
     with_items: "{{ files_to_delete.files }}"
   
-  - name: Clear yum cache
-    ansible.builtin.shell: /usr/bin/yum clean all
