@@ -1,7 +1,7 @@
 ---
 # test play in a sub directory
 
-- name: test-play.yml apply ol-manager configuration to all nodes
+- name: Apply ol-manager configuration to all nodes
   hosts: all
   user: root
   

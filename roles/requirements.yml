@@ -1,3 +1,5 @@
----
-collections:
-- community.vmware
+# ---
+#   - src: https://my.scm.com/my-ansible-roles/role1.git
+#     scm: git
+#     version: master
+#     name: ol-manager
