@@ -3,6 +3,7 @@
 
 - name: Apply ol-manager configuration to all nodes
   hosts: all
+  gather_facts: no
   user: root
   
 
